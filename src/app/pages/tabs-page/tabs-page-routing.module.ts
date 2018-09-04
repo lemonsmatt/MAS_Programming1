@@ -6,6 +6,7 @@ import { TabsPage } from './tabs-page';
 import { AboutPage } from '../about/about';
 import { MapPage } from '../map/map';
 import { SchedulePage } from '../schedule/schedule';
+import { BulletinPage } from '../bulletinPage/bulletinPage';
 import { SessionDetailPage } from '../session-detail/session-detail';
 import { SpeakerDetailPage } from '../speaker-detail/speaker-detail';
 import { SpeakerListPage } from '../speaker-list/speaker-list';
@@ -54,6 +55,12 @@ const routes: Routes = [
         path: 'about',
         component: AboutPage,
         outlet: 'about'
+      },
+      // tab five
+      {
+        path: 'bulletinPage',
+        component: BulletinPage,
+        outlet: 'bulletinPage'
       }
     ]
   }

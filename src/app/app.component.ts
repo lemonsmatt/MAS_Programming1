@@ -3,8 +3,17 @@ import { Router } from '@angular/router';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { Events, MenuController, Platform } from '@ionic/angular';
+import * as firebase from 'Firebase';
 
 import { UserData } from './providers/user-data';
+
+const config = {
+  apiKey: "AIzaSyDp_ehZtwVt_DoPXlz4meDO4bSxT-lSdpU",
+  authDomain: 'mas-programming1.firebaseapp.com',
+  databaseURL: 'https://mas-programming1.firebaseio.com',
+  projectId: 'mas-programming1',
+  storageBucket: 'mas-programming1.appspot.com',
+};
 
 @Component({
   selector: 'app-root',
@@ -28,6 +37,11 @@ export class AppComponent implements OnInit {
     {
       title: 'About',
       url: '/app/tabs/(about:about)',
+      icon: 'information-circle'
+    },
+    {
+      title: 'Bulletin',
+      url: '/app/tabs/(bulletinPage:bulletinPage)',
       icon: 'information-circle'
     }
   ];
@@ -55,6 +69,7 @@ export class AppComponent implements OnInit {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
+    firebase.initializeApp(config);
   }
 
   checkLoginStatus() {

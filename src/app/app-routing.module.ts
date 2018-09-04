@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/tutorial',
+    redirectTo: '/login',
     pathMatch: 'full'
   },
   {
@@ -27,10 +27,11 @@ const routes: Routes = [
     path: 'app',
     loadChildren: './pages/tabs-page/tabs-page.module#TabsModule'
   },
-  {
-    path: 'tutorial',
-    loadChildren: './pages/tutorial/tutorial.module#TutorialModule'
-  }
+  { path: 'createBulletin', loadChildren: './pages/create-bulletin/create-bulletin.module#CreateBulletinPageModule' },
+  { path: 'bulletinDetail/:key', loadChildren: './pages/bulletin-detail/bulletin-detail.module#BulletinDetailPageModule' }
+
+
+
 ];
 
 @NgModule({
