@@ -6,6 +6,7 @@ import { IonicModule } from '@ionic/angular';
 import { AboutPage } from './about';
 import { PopoverPage } from '../about-popover/about-popover';
 import { AboutPageRoutingModule } from './about-routing.module';
+import { FormatDatePipe } from '../../format-date.pipe';
 
 @NgModule({
   imports: [
@@ -14,7 +15,7 @@ import { AboutPageRoutingModule } from './about-routing.module';
     IonicModule,
     AboutPageRoutingModule
   ],
-  declarations: [AboutPage, PopoverPage],
+  declarations: [AboutPage, PopoverPage, FormatDatePipe],
   entryComponents: [PopoverPage],
   bootstrap: [AboutPage],
 })
